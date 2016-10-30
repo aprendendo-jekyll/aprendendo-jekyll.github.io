@@ -1,0 +1,32 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: "Atividades do curso: Criando sites estáticos com Jekyll"
+email: aprendendo@jekyll.com
+description: > # this means to ignore newlines until "baseurl:"
+  Esse blog foi construído ao fazer as atividades do curso Criando sites estáticos com Jekyll
+  ministrado por Willian Justen. Jekyll é uma ótima ferramenta para criar sites
+  estáticos.
+baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+url: "http://jekyll.gq" # change this to the base hostname & protocol for your site
+
+timezone: America/Sao_Paulo
+
+# twitter_username: ""
+github_username:  dadeke
+
+# Build settings
+markdown: kramdown
+
+# Define permalink
+# permalink: /:categories/:year/:month/:day/:title
+# permalink: /:year/:month/:day/:title.html
+permalink: /:title.html
+
+# Make sure to exclude 'vendor' from the build 
+exclude: [vendor, "Gemfile", "Gemfile.lock"]

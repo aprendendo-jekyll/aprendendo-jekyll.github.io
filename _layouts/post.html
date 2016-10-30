@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+{% include minutes-to-read.html %}
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        <!-- Whitespace added for readability -->
+        {% assign m = page.date | date: "%-m" %}
+        {{ page.date | date: "%-d" }} de 
+        {% case m %}
+         {% when '1' %}janeiro
+         {% when '2' %}fevereiro
+         {% when '3' %}março
+         {% when '4' %}abril
+         {% when '5' %}maio
+         {% when '6' %}junho
+         {% when '7' %}julho
+         {% when '8' %}agosto
+         {% when '9' %}setembro
+         {% when '10' %}outubro
+         {% when '11' %}novembro
+         {% when '12' %}dezembro
+       {% endcase %} de 
+       {{ page.date | date: "%Y" }}
+      </time>
+      {% if page.author %}
+      • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+      {% endif %}
+      <span class="reading-time" title="Estimated read time"> - Tempo médio de leitura: {{ minutesText }}</span>
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+</article>

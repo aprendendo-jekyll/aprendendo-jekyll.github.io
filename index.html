@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="home">
+  <h1 class="page-heading">Postagens</h1>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">
+          {% assign m = post.date | date: "%-m" %}
+          {{ post.date | date: "%-d" }} de
+          {% case m %}
+           {% when '1' %}janeiro
+           {% when '2' %}fevereiro
+           {% when '3' %}março
+           {% when '4' %}abril
+           {% when '5' %}maio
+           {% when '6' %}junho
+           {% when '7' %}julho
+           {% when '8' %}agosto
+           {% when '9' %}setembro
+           {% when '10' %}outubro
+           {% when '11' %}novembro
+           {% when '12' %}dezembro
+         {% endcase %} de
+         {{ post.date | date: "%Y" }}
+       </span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+  <p class="rss-subscribe">Inscreva-se <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">via RSS</a></p>
+</div>
