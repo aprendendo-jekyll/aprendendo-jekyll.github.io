@@ -15,3 +15,7 @@ Caso queira encontrar o código fonte para fazer um novo tema Jekyll acesse:
 O código fonte do Jekyll está aqui
 {% include icon-github.html username="jekyll" %} /
 [jekyll](https://github.com/jekyll/jekyll){:target="_blank"}
+
+E o código fonte desse mini blog está aqui 
+{% include icon-github.html username="dadeke" %} /
+[aprendendo-jekyll](https://github.com/aprendendo-jekyll/aprendendo-jekyll.github.io){:target="_blank"}
